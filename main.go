@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	"github.com/MohabMohamed/challenge/a"
+	"github.com/MohabMohamed/challenge/b"
 )
 
 func main() {
@@ -18,7 +19,9 @@ func main() {
 	case "a":
 		haystack, needle := a.GetInput()
 		fmt.Printf("output = %d\n", a.FindNeedleIndex(haystack, needle))
-
+	case "b":
+		str1, str2 := b.GetInput()
+		fmt.Printf("output = %v\n", b.IsAnagram(str1, str2))
 	default:
 		panic("invalid challenge number")
 	}
