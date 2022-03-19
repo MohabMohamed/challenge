@@ -8,6 +8,7 @@ import (
 	"github.com/MohabMohamed/challenge/a"
 	"github.com/MohabMohamed/challenge/b"
 	"github.com/MohabMohamed/challenge/c"
+	"github.com/MohabMohamed/challenge/d"
 )
 
 func main() {
@@ -29,6 +30,13 @@ func main() {
 			panic(err)
 		}
 		fmt.Printf("output = %s\n", c.GetPalindromeNumber(digitCount))
+	case "d":
+		numbersArr, err := d.GetInput()
+		if err != nil {
+			panic(err)
+		}
+		minIndices, maxIndices := d.GetMaxMinSumIndices(numbersArr)
+		fmt.Printf("min indices = %v\nmax indices = %v\n", minIndices, maxIndices)
 	default:
 		panic("invalid challenge number")
 	}
